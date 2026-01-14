@@ -35,3 +35,4 @@ miBoton.setOnAction(event -> {
     }
 });
 root.getChildren().add(miBoton);
+```
