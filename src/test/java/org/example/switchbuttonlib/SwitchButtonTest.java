@@ -19,7 +19,6 @@ public class SwitchButtonTest extends ApplicationTest {
         stage.show();
     }
 
-    // Test de Lógica (JUnit puro)
     @Test
     public void testLogic() {
         assertFalse(boton.isSwitchedOn(), "El botón debería empezar apagado");
@@ -27,14 +26,11 @@ public class SwitchButtonTest extends ApplicationTest {
         assertTrue(boton.isSwitchedOn(), "El botón debería estar encendido");
     }
 
-    // Test de Interacción (TestFX)
     @Test
     public void testClickInteraction() {
-        // El robot hace clic en el botón
         clickOn(boton);
         assertTrue(boton.isSwitchedOn(), "El botón debería encenderse al hacer clic");
 
-        // El robot hace clic otra vez
         clickOn(boton);
         assertFalse(boton.isSwitchedOn(), "El botón debería apagarse al hacer clic de nuevo");
     }
