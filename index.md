@@ -21,7 +21,7 @@ Para probar la librería:
 2.  Descarga el archivo `.jar` de la última versión (v1.0.0).
 3.  Añádelo al *Build Path* o dependencias de tu proyecto.
 
-## 🛠 Ejemplo de Uso
+## Ejemplo de Uso
 Aquí tienes un ejemplo básico de cómo añadir el botón a tu interfaz y escuchar sus eventos:
 
 ```java
