@@ -12,7 +12,7 @@ El componente incluye lo siguiente:
 
 ## Instalación
 Para probar la librería:
-1.  Ve a la pestaña de **[Releases](../../releases)** de este repositorio.
+1.  Ve a la pestaña de **[Releases](https://github.com/Josemg5/customComponent/releases)** de este repositorio.
 2.  Descarga el archivo `.jar` de la última versión (v1.0.0).
 3.  Añádelo al *Build Path* o dependencias de tu proyecto.
 
