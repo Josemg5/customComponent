@@ -1,8 +1,3 @@
----
-layout: default
-title: Documentación SwitchButton
----
-
 # SwitchButton Component
 
 Bienvenido a la página de documentación de mi componente. He desarrollado un **SwitchButton** (botón interruptor) personalizado para la asignatura de Desarrollo de Interfaces (Práctica 3.2).
@@ -21,7 +16,7 @@ Para probar la librería:
 2.  Descarga el archivo `.jar` de la última versión (v1.0.0).
 3.  Añádelo al *Build Path* o dependencias de tu proyecto.
 
-## Ejemplo de Uso
+## 🛠 Ejemplo de Uso
 Aquí tienes un ejemplo básico de cómo añadir el botón a tu interfaz y escuchar sus eventos:
 
 ```java
@@ -34,5 +29,6 @@ miBoton.setOnAction(event -> {
         System.out.println("Interruptor APAGADO");
     }
 });
-root.getChildren().add(miBoton);
-```
+
+// Añadir al layout (ejemplo)
+// root.getChildren().add(miBoton);
