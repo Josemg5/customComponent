@@ -2,36 +2,56 @@ package org.example.switchbuttonlib;
 
 import javafx.scene.Scene;
 import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import org.junit.jupiter.api.Test;
 import org.testfx.framework.junit5.ApplicationTest;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class SwitchButtonTest extends ApplicationTest {
+class SwitchButtonTest extends ApplicationTest {
 
-    private SwitchButton boton;
+    private SwitchButton button;
 
     @Override
     public void start(Stage stage) {
-        boton = new SwitchButton();
-        stage.setScene(new Scene(new StackPane(boton), 100, 100));
+        button = new SwitchButton();
+        stage.setScene(new Scene(new StackPane(button), 100, 100));
         stage.show();
     }
 
     @Test
-    public void testLogic() {
-        assertFalse(boton.isSwitchedOn(), "El botón debería empezar apagado");
-        boton.setSwitchedOn(true);
-        assertTrue(boton.isSwitchedOn(), "El botón debería estar encendido");
+    void testClickInteraction() {
+        assertFalse(button.isSwitchedOn(), "Debería empezar apagado");
+
+        clickOn(button);
+
+        assertTrue(button.isSwitchedOn(), "Debería encenderse tras el clic");
+
+        clickOn(button);
+
+        assertFalse(button.isSwitchedOn(), "Debería apagarse tras el segundo clic");
+    }
+
+
+    @Test
+    void testVerticalProperty() {
+        SwitchButton btn = new SwitchButton();
+        btn.setVertical(true);
+        assertTrue(btn.isVertical());
     }
 
     @Test
-    public void testClickInteraction() {
-        clickOn(boton);
-        assertTrue(boton.isSwitchedOn(), "El botón debería encenderse al hacer clic");
+    void testColorProperties() {
+        SwitchButton btn = new SwitchButton();
+        btn.setColorOn(Color.GOLD);
+        assertEquals(Color.GOLD, btn.getColorOn());
+    }
 
-        clickOn(boton);
-        assertFalse(boton.isSwitchedOn(), "El botón debería apagarse al hacer clic de nuevo");
+    @Test
+    void testDisabledState() {
+        SwitchButton btn = new SwitchButton();
+        btn.setDisable(true);
+        assertTrue(btn.isDisabled());
     }
 }
